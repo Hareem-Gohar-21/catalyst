@@ -85,7 +85,7 @@ export default async function Home({ params }: Props) {
   return (
     <>
       <Slideshow />
-
+      <h2>hiiiiii there!</h2>
       <FeaturedProductsList
         cta={{ label: t('FeaturedProducts.cta'), href: '/shop-all' }}
         description={t('FeaturedProducts.description')}

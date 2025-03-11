@@ -83,6 +83,7 @@ const getProduct = async (props: Props) => {
             title: t('specifications'),
             content: (
               <div className="prose @container">
+
                 <dl className="flex flex-col gap-4">
                   {specifications.map((field, index) => (
                     <div className="grid grid-cols-1 gap-2 @lg:grid-cols-2" key={index}>
@@ -250,7 +251,7 @@ export default async function Product(props: Props) {
         quantityLabel={t('ProductDetails.quantity')}
         thumbnailLabel={t('ProductDetails.thumbnail')}
       />
-
+      <h1>Product Page</h1>
       <FeaturedProductsCarousel
         cta={{ label: t('RelatedProducts.cta'), href: '/shop-all' }}
         emptyStateSubtitle={t('RelatedProducts.browseCatalog')}

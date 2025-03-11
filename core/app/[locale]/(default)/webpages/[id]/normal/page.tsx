@@ -18,6 +18,7 @@ interface Props {
 
 const getWebPage = cache(async (id: string): Promise<WebPageData> => {
   const data = await getWebpageData({ id: decodeURIComponent(id) });
+  console.log(data);
   const webpage = data.node?.__typename === 'NormalPage' ? data.node : null;
 
   if (!webpage) {
@@ -55,6 +56,7 @@ async function getWebPageBreadcrumbs(id: string): Promise<Breadcrumb[]> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const webpage = await getWebPage(id);
+  console.log(webpage)
   const { pageTitle, metaDescription, metaKeywords } = webpage.seo;
 
   return {

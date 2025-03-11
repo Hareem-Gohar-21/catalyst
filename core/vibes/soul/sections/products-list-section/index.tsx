@@ -67,6 +67,7 @@ export function ProductsListSection({
     <div className="group/products-list-section @container">
       <div className="mx-auto max-w-screen-2xl px-4 py-10 @xl:px-6 @xl:py-14 @4xl:px-8 @4xl:py-12">
         <div>
+        
           <Stream fallback={<BreadcrumbsSkeleton />} value={streamableBreadcrumbs}>
             {(breadcrumbs) =>
               breadcrumbs && breadcrumbs.length > 1 && <Breadcrumbs breadcrumbs={breadcrumbs} />
@@ -90,6 +91,7 @@ export function ProductsListSection({
               </Suspense>
             </h1>
             <div className="flex gap-2">
+            
               <Stream
                 fallback={<SortingSkeleton />}
                 value={Promise.all([
@@ -147,6 +149,7 @@ export function ProductsListSection({
               rangeFilterApplyLabel={rangeFilterApplyLabel}
               resetFiltersLabel={resetFiltersLabel}
             />
+             <h1>Hiiiiiii ! I'm in sections -/ product-list-section</h1>
           </aside>
 
           <div className="flex-1 group-has-[[data-pending]]/products-list-section:animate-pulse">

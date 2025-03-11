@@ -297,12 +297,13 @@ export default async function Category(props: Props) {
         sortParamName="sort"
         title={getTitle(props)}
         totalCount={getTotalCount(props)}
-      />
+      /> 
       <Stream value={Promise.all([getCategory(props), getProducts(props)])}>
         {([category, products]) => (
           <CategoryViewed category={category} categoryId={category.entityId} products={products} />
         )}
       </Stream>
+     
     </>
   );
 }
